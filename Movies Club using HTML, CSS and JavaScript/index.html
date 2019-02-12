@@ -1,0 +1,73 @@
+<html>
+<head>
+   <title>Movie Club</title>
+   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Autour One'>
+   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Cagliostro'>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+         <p id="heading">Movie Club</p>
+         <p id="tagline">movies that you like</p>
+         <div class="search-movies">
+            <input type="text" placeholder="Search Movies" onkeyup="searchMovies()" id="filterMovie">
+         </div>
+      </div>
+      <div class="body">
+         <div class="add-movies">
+            <input type="text" placeholder="Add new Movies..." id="movieName">
+            <button type="button" onclick="addNewMovie()">Add Movie</button>
+         </div>
+         <div class="movie-list">
+            <h1>Movies to Watch</h1>
+            <ul id="ulist">
+               <li id="list">
+                  <div class="movie-list-style">
+                     <input type="checkbox" class="checkbox-style">
+                     <span>Jab Tak Hai Jaan</span>
+                     <button type="button" class="movie-delete">Delete</button>
+                  </div>
+                  <div class="movie-list-style">
+                     <input type="checkbox" class="checkbox-style">
+                     <span>Om Shanti Om</span>
+                     <button type="button" class="movie-delete">Delete</button>
+                  </div>
+                  <div class="movie-list-style">
+                     <input type="checkbox" class="checkbox-style">
+                     <span>Dilwale Dulhania Le Jayenge</span>
+                     <button type="button" class="movie-delete">Delete</button>
+                  </div>
+                  <div class="movie-list-style">
+                     <input type="checkbox" class="checkbox-style">
+                     <span>Hum Aapke Hai Koun</span>
+                     <button type="button" class="movie-delete">Delete</button>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer">
+         <button type="button" class="select-all-movies" onclick="selectAllMovies()">Select All</button>
+         <button type="button" class="hide-movie" onclick="hideMovies()">Hide Movies</button>
+         <button type="button" class="show-movie" onclick="showMovies()">Show Movies</button>
+      </div>
+   </div>
+
+   <div id="myModal" class="modal">
+      <div class="modal-content">
+         <span class="close" onclick="closeModalMessage()">&times;</span>
+         <h1 class="warning-message">No  Movie  Selected</h1>
+      </div>
+   </div>
+
+   <div id="error-myModal" class="error-modal">
+      <div class="error-modal-content">
+         <span class="error-close" onclick="closeErrorMessage()">&times;</span>
+         <h1 class="error-warning-message">Type  Movie  name  first</h1>
+      </div>
+   </div>
+   <script src="javascript.js"></script>
+</body>
+</html>
