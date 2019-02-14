@@ -22,11 +22,12 @@ code {
    border-radius: 5px;
    margin-bottom: 20px;
    text-align:center;
+   background-color: #A3E4D7;
 }
 
 .card:hover {
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}     
+}
 
 h1{
    text-align: center;
