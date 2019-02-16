@@ -14,7 +14,7 @@ class App extends Component {
       return (
          <div className="App">
 
-            <h1>My Basic React App</h1>
+            <h1 class="heading">My Basic React App</h1>
             <Display displayInfos={this.state.displayInfos} />
          </div>
       );
