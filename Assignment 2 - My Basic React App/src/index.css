@@ -33,3 +33,8 @@ h1{
    text-align: center;
    font-family: 'Acme';
 }
+
+.heading{
+   font-family: 'Aclonica';
+   font-size: 45px;
+}
