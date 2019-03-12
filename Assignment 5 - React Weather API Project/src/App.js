@@ -48,6 +48,7 @@ class App extends Component{
          <BrowserRouter>
          <Switch>
          <Route exact path = '/form' component={GetForm}  />
+         <Route path = '/home' component = {App} />
          <div>
             <div className="wrapper">
                <div className="main">
