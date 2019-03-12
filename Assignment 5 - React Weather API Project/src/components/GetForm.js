@@ -6,6 +6,7 @@ class GetForm extends Component{
    state = {
       name : undefined,
       birthday : undefined,
+      aboutMe : undefined,
       isData: false
    }
    getFormData = (e) =>{
@@ -13,6 +14,7 @@ class GetForm extends Component{
       this.setState({
          name: e.target.elements.username.value,
          birthday: e.target.elements.bday.value,
+         aboutMe : e.target.elements.aboutMe.value,
          isData: true
       })
    }
@@ -27,6 +29,9 @@ class GetForm extends Component{
                   <input type="text" placeholder="Enter Name" name="username"/>
                   <label>Birthday</label>
                   <input type="date" name="bday"/>
+                  <label>About Me</label><br />
+                  <textarea name="aboutMe"></textarea>
+                  <a href="/home"><input type="button" class="button" value="Home" /></a>
                   <input type="submit" class="button" value="Submit"/>
                </div>
             </form>
@@ -34,6 +39,7 @@ class GetForm extends Component{
                   <ShowFormData
                      name={this.state.name}
                      birthday={this.state.birthday}
+                     aboutMe = {this.state.aboutMe}
                   />
                ) : ''
             }
