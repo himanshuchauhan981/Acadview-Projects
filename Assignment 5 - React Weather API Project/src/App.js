@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-
 import Titles from './components/Titles';
 import Form from './components/Form';
 import Weather from './components/Weather';
+import GetForm from './components/GetForm';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 const API_KEY = "946a6a8025ae73c07fd475135a81432a";
 
@@ -44,6 +45,9 @@ class App extends Component{
    }
    render(){
       return (
+         <BrowserRouter>
+         <Switch>
+         <Route exact path = '/form' component={GetForm}  />
          <div>
             <div className="wrapper">
                <div className="main">
@@ -68,6 +72,8 @@ class App extends Component{
                </div>
             </div>
          </div>
+         </Switch>
+         </BrowserRouter>
       );
    }
 }
